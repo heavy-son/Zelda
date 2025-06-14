@@ -1,0 +1,14 @@
+@import url(./header.css);
+@import url(./main.css);
+
+body{
+    overflow-x: scroll;
+    overflow-y: hidden;
+    background-color: #A89AD8;
+    background-image: url("../Imagens/Padrão.png")
+}
+
+html, body{
+    height: 100%;
+    margin: 0;
+}

@@ -1,0 +1,107 @@
+main{
+    margin: 0px;
+    padding: 0px;
+    height: 80vh;
+}
+
+.inicial{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    height: 100%;
+    gap: 0px 200px;
+}
+
+.linha{
+    color: #fff;
+    font-size: 80px;
+    display: flex;
+    flex-direction: row-reverse;
+    height: 150px;
+    align-items: center;
+}
+
+.game img{
+    height: 65vh;
+    aspect-ratio: 16/9;
+    transition: 0.7s;
+}
+
+.game{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.game img:hover{
+    height: 70vh;
+}
+
+.jogo{
+    font-size: 40px;
+    color: #fff;
+    position: absolute;
+    transition: opacity 0.3s ease 0s, bottom 0.5s ease 0s, left 0.5s ease 0s;
+    /* transition: opacity 0.2s ease 0s, bottom 0.2s ease 0s, right 0.2s ease 0s; */
+    font-size: 30px;
+    opacity: 0;
+    bottom: 5%;
+    left: 100%;
+    white-space: nowrap;
+    writing-mode: vertical-rl;
+    text-transform: uppercase;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.zelda{
+    font-size: 40px;
+    color: #fff;
+    position: absolute;
+    transition: opacity 0.3s ease 0s, top 0.5s ease 0s, left 0.5s ease 0s;
+    /* transition: opacity 0.2s ease 0s, top 0.2s ease 0s, right 0.2s ease 0s; */
+    font-size: 30px;
+    opacity: 0;
+    top: 0%;
+    left: 100%;
+    white-space: nowrap;
+    writing-mode: vertical-rl;
+    text-transform: uppercase;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.game:hover .zelda{
+    opacity: 1;
+    top: 0%;
+    left: 102%;
+    /* transition: opacity 0.7s ease 0.5s, top 0.5s ease 0.5s, right 0.5s ease 0.5s; */
+    transition: opacity 0.3s ease 0.5s, top 0.5s ease 0.5s, left 0.5s ease 0.5s;   
+}
+
+.game:hover .jogo{
+    opacity: 1;
+    bottom: 5%;
+    left: 102%;
+    /* transition: opacity 0.7s ease 0.5s, bottom 0.5s ease 0.5s, right 0.5s ease 0.5s; */
+    transition: opacity 0.3s ease 0.5s, bottom 0.5s ease 0.5s, left 0.5s ease 0.5s;   
+}
+
+.data{
+    opacity: 0;
+    transform: translateY(-5px);
+    transition: opacity 0.2s ease 0s, transform 0.2s ease 0s;
+    font-size: 40px;
+    color: #fff;
+    place-self: start;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.game:hover .data{
+    opacity: 1;
+    transform: translateY(5px);
+    transition: opacity 0.3s ease 0.5s, transform 0.5s ease 0.5s;
+}
