@@ -2,15 +2,29 @@ main{
     margin: 0px;
     padding: 0px;
     height: 80vh;
+    flex: 1 1 auto;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .inicial{
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     flex-direction: column;
     height: 100%;
     gap: 0px 200px;
+}
+
+.inicial::-webkit-scrollbar {
+    display: none;
 }
 
 .linha{
@@ -26,6 +40,7 @@ main{
     height: 65vh;
     aspect-ratio: 16/9;
     transition: 0.7s;
+    scroll-snap-align: center;
 }
 
 .game{

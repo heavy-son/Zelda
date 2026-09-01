@@ -2,13 +2,22 @@
 @import url(./main.css);
 
 body{
-    overflow-x: scroll;
-    overflow-y: hidden;
     background-color: #A89AD8;
-    background-image: url("../Imagens/Padrão.png")
+    background-image: url("../Imagens/Padrão.png");
+    display: flex;
+    flex-direction: column;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.game {
+    scroll-snap-align: center;
 }
 
 html, body{
     height: 100%;
     margin: 0;
+    overflow: hidden;
 }
